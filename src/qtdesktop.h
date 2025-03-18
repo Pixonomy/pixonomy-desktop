@@ -2,9 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_qtdesktop.h"
+#include <memory>
 
-class qtdesktop : public QMainWindow
-{
+class qtdesktop : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -12,5 +12,7 @@ public:
     ~qtdesktop();
 
 private:
-    Ui::qtdesktopClass ui;
+    std::shared_ptr<Ui::qtdesktopClass> ui;
+    void saveUIState();
+    void restoreUIState();
 };
