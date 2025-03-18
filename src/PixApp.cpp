@@ -2,8 +2,8 @@
 
 PixApp PixApp::self;
 
-PixApp::PixApp()
-	: m_settings(std::make_shared<QSettings>("Pixonomy.ini", QSettings::IniFormat)) {
+PixApp::PixApp() :
+	m_settings(std::make_shared<QSettings>("Pixonomy.ini", QSettings::IniFormat)) {
 }
 
 PixApp::~PixApp() {
